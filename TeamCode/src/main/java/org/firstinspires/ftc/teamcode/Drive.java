@@ -40,12 +40,12 @@ public class Drive extends OpMode {
         LineraMecanizmeteleop.arm.setPower(gamepad2.left_stick_y);
 
         if (gamepad2.y){
-            LineraMecanizmeteleop.claw.setPosition(.7);
+            LineraMecanizmeteleop.claw.setPosition(.8);
             
         }
 
         if (gamepad2.a){
-            LineraMecanizmeteleop.claw.setPosition(.3);
+            LineraMecanizmeteleop.claw.setPosition(.425);
 
         }
 

@@ -29,14 +29,14 @@ goes backwards 10.5 mm
     double backwardSpeed = -0.5;
 
     //in milliseconds
-    int startTime = 300;
-    int firstTurnTime = 1000;
-    int howFarSideways = 2150;
-    int secondTurnTime = 1000;
-    int backwardTime = 300;
+    int startTime = 2000;
+//    double firstTurnTime = -20;
+//    int howFarSideways = 2100;
+//    double secondTurnTime = -45;
+//    int backwardTime = 300;
 
-    int sleepTime = 10;
-    int sleepArm = 1000;
+    int sleepTime = 50;
+//    int sleepArm = 1000;
 
     @Override
     public void runOpMode() throws InterruptedException {
@@ -46,23 +46,27 @@ goes backwards 10.5 mm
         LineraMecanizmeteleop.init(hardwareMap);
         waitForStart();
 
+        driveAuto.reset();
+
         driveAuto.moveforward(forwardSpeed, startTime);
         driveAuto.stopmotor();
         sleep(sleepTime);
-        driveAuto.RightTurn(forwardSpeed, firstTurnTime);
-        driveAuto.stopmotor();
-        sleep(sleepTime);
-        driveAuto.moveforward(forwardSpeed, howFarSideways);
-        driveAuto.stopmotor();
-        sleep(sleepTime);
-        driveAuto.LeftTurn(forwardSpeed, secondTurnTime);
-        driveAuto.stopmotor();
-        driveAuto.moveforward(backwardSpeed, backwardTime);
-        driveAuto.stopmotor();
-
-        sleep(sleepArm);
+//        driveAuto.RightTurn(forwardSpeed, firstTurnTime);
+//        driveAuto.stopmotor();
+//        sleep(sleepTime);
+//        driveAuto.moveforward(forwardSpeed, howFarSideways);
+//        driveAuto.stopmotor();
+//        sleep(sleepTime);
+//        driveAuto.LeftTurn(forwardSpeed, secondTurnTime);
+//        driveAuto.stopmotor();
+//        sleep(sleepTime);
+//        driveAuto.moveforward(backwardSpeed, backwardTime);
+//        driveAuto.stopmotor();
+//
+//        sleep(sleepArm);
     }
 }
+
 
 
 
