@@ -31,10 +31,11 @@ public class Drive extends OpMode {
     @Override
     public void loop() {
         //seting powers
-        driveteleop.topleft.setPower(-gamepad1.left_stick_y / 1.1 + -gamepad1.right_stick_x * 1.1 + gamepad1.left_stick_x);
-        driveteleop.backleft.setPower(gamepad1.left_stick_y / 1.1 + -gamepad1.right_stick_x * 1.1 -gamepad1.left_stick_x);
-        driveteleop.topright.setPower(-gamepad1.left_stick_y * 1.1 + gamepad1.right_stick_x * 1.2 -gamepad1.left_stick_x);
-        driveteleop.backright.setPower(gamepad1.left_stick_y * 1.1 + gamepad1.right_stick_x * 1.1 + gamepad1.left_stick_x);
+        driveteleop.topleft.setPower(-gamepad1.right_stick_y / 1.1 + -gamepad1.left_stick_x * 1.1 + gamepad1.right_stick_x);
+        driveteleop.backleft.setPower(gamepad1.right_stick_y / 1.1 + -gamepad1.left_stick_x * 1.1 -gamepad1.right_stick_x);
+        driveteleop.topright.setPower(-gamepad1.right_stick_y * 1.1 + gamepad1.left_stick_x * 1.2 -gamepad1.right_stick_x);
+        driveteleop.backright.setPower(gamepad1.right_stick_y * 1.1 + gamepad1.left_stick_x * 1.1 + gamepad1.right_stick_x);
+
         LineraMecanizmeteleop.arm.setPower(gamepad2.left_stick_y);
 
         if (gamepad2.y){
