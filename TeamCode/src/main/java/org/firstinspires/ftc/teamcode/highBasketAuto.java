@@ -30,13 +30,16 @@ goes backwards 11 mm
     double backwardSpeed = -.5;
 
     //in milliseconds
-    int linear = 100;
-    int netzone = 200;
-    int firstBackwardTime = 700;
+    int linear = 20;
+    int netzone = 250;
+    int firstBackwardTime = 0;
 
 
-    int sleepTime = 10;
-    int sleepLift = 1000;
+    int sleepTime = 500;
+    int sleepTime2 = 1500;
+    int sleepTime3 = 4900;
+
+    int sleepLift = 1975;
 
     @Override
     public void runOpMode() throws InterruptedException {
@@ -53,12 +56,18 @@ goes backwards 11 mm
         driveAuto.moveforward(forwardSpeed, netzone);
         driveAuto.stopmotor();
         sleep(sleepTime);
-       LineraMecanizmeteleop.leftliner.setPower(.5);
-        driveAuto.stopmotor();
+       LineraMecanizmeteleop.leftliner.setPower(-.64);
         sleep(sleepLift);
-        driveAuto.moveforward(backwardSpeed, firstBackwardTime);
+        driveAuto.moveforward(forwardSpeed, netzone);
         driveAuto.stopmotor();
-        sleep(sleepTime);
+        LineraMecanizmeteleop.leftliner.setPower(-.29);
+        LineraMecanizmeteleop.claw.setPosition(.8);
+        sleep(sleepTime2);
+        driveAuto.moveforward(backwardSpeed, firstBackwardTime);
+        LineraMecanizmeteleop.stopmotor2();
+        sleep(sleepTime3);
+        driveAuto.stopmotor();
+
 
     }
 
