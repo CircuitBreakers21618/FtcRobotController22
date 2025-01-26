@@ -28,18 +28,16 @@ goes backwards 10.5 mm
     double forwardSpeed = 0.5;
     double backwardSpeed = -0.5;
 
-    //in milliseconds
-<<<<<<< HEAD
+    //in millisecondsHEAD
     int startTime = 300;
-    int turn = 2000;
+    int strafe = 2000;
     int backwardTime = 300;
-=======
-    int startTime = 2000;
-//    double firstTurnTime = -20;
+    //int startTime = 2000;
+//   double firstTurnTime = -20;
 //    int howFarSideways = 2100;
 //    double secondTurnTime = -45;
 //    int backwardTime = 300;
->>>>>>> parent of c385733 (Update Auto1.java)
+//    parent of c385733 (Update Auto1.java)
 
     int sleepTime = 50;
 //    int sleepArm = 1000;
@@ -57,23 +55,20 @@ goes backwards 10.5 mm
         driveAuto.moveforward(forwardSpeed, startTime);
         driveAuto.stopmotor();
         sleep(sleepTime);
-<<<<<<< HEAD
-        driveAuto.strafe(forwardSpeed, turn);
+        driveAuto.strafe(forwardSpeed, strafe);
         driveAuto.stopmotor();
         sleep(sleepTime);
-=======
 //        driveAuto.RightTurn(forwardSpeed, firstTurnTime);
 //        driveAuto.stopmotor();
 //        sleep(sleepTime);
->>>>>>> parent of c385733 (Update Auto1.java)
 //        driveAuto.moveforward(forwardSpeed, howFarSideways);
 //        driveAuto.stopmotor();
 //        sleep(sleepTime);
 //        driveAuto.LeftTurn(forwardSpeed, secondTurnTime);
 //        driveAuto.stopmotor();
 //        sleep(sleepTime);
-//        driveAuto.moveforward(backwardSpeed, backwardTime);
-//        driveAuto.stopmotor();
+        driveAuto.moveforward(backwardSpeed, backwardTime);
+        driveAuto.stopmotor();
 //
 //        sleep(sleepArm);
     }

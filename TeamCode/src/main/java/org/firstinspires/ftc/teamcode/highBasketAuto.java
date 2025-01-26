@@ -30,18 +30,12 @@ goes backwards 11 mm
     double backwardSpeed = -.5;
 
     //in milliseconds
-    int netzone = 1500;
+    int linear = 100;
+    int netzone = 200;
     int firstBackwardTime = 700;
-    int firstTurnTime = 1050;
-    int howFarForward = 460;
-    int secondTurnTime = 1125;
-    int howFarSideways = 4350;
-    int thirdTurnTime = 1000;
-    int secondBackwardTime = 600;
-    int linear = 440;
+
 
     int sleepTime = 10;
-    int sleepArm = 1000;
     int sleepLift = 1000;
 
     @Override
@@ -56,32 +50,15 @@ goes backwards 11 mm
         driveAuto.strafe(forwardSpeed, linear);
         driveAuto.stopmotor();
         sleep(sleepTime);
-        driveAuto.LeftTurn(forwardSpeed, firstTurnTime);
-        driveAuto.stopmotor();
-        sleep(sleepTime);
         driveAuto.moveforward(forwardSpeed, netzone);
         driveAuto.stopmotor();
         sleep(sleepTime);
-//        LineraMecanizmeteleop.leftliner.setPower(.5);
-//        driveAuto.stopmotor();
-//        sleep(sleepLift);
+       LineraMecanizmeteleop.leftliner.setPower(.5);
+        driveAuto.stopmotor();
+        sleep(sleepLift);
         driveAuto.moveforward(backwardSpeed, firstBackwardTime);
         driveAuto.stopmotor();
         sleep(sleepTime);
-        driveAuto.LeftTurn(forwardSpeed, firstTurnTime);
-        driveAuto.stopmotor();
-        sleep(sleepTime);
-        driveAuto.moveforward(forwardSpeed, howFarSideways);
-        driveAuto.stopmotor();
-        sleep(sleepTime);
-        driveAuto.LeftTurn(forwardSpeed, thirdTurnTime);
-        driveAuto.stopmotor();
-        sleep(sleepTime);
-        driveAuto.moveforward(backwardSpeed, secondBackwardTime);
-        driveAuto.stopmotor();
-        sleep(sleepTime);
-
-        sleep(sleepArm);
 
     }
 
