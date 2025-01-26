@@ -110,9 +110,9 @@ public class Drive2 {
     }
 
     public void moveforward(double power, long time) throws InterruptedException {
-        backleft.setPower(-power*1.13);
+        backleft.setPower(-power*1.15);
         backright.setPower(-power);
-        topleft.setPower(power*1.05);
+        topleft.setPower(power*1.03);
         topright.setPower(power);
         //how long it waits
         sleep(time);

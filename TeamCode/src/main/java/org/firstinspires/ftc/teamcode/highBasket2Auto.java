@@ -3,8 +3,8 @@ package org.firstinspires.ftc.teamcode;
 import com.qualcomm.robotcore.eventloop.opmode.Autonomous;
 import com.qualcomm.robotcore.eventloop.opmode.LinearOpMode;
 
-@Autonomous(name = "highBasketAuto", group = "2024-25 SP")
-public class highBasketAuto extends LinearOpMode {
+@Autonomous(name = "highBasket2Auto", group = "2024-25 SP")
+public class highBasket2Auto extends LinearOpMode {
 
     /*
 Bryce
@@ -31,6 +31,7 @@ goes backwards 11 mm
 
     //in milliseconds
     int linear = 20;
+    int linear2 = 1000;
     int netzone = 250;
     int firstBackwardTime = 0;
 
@@ -56,17 +57,23 @@ goes backwards 11 mm
         driveAuto.moveforward(forwardSpeed, netzone);
         driveAuto.stopmotor();
         sleep(sleepTime);
-       LineraMecanizmeteleop.leftliner.setPower(-.64);
+        LineraMecanizmeteleop.leftliner.setPower(-.64);
         sleep(sleepLift);
         driveAuto.moveforward(forwardSpeed, netzone);
         driveAuto.stopmotor();
         LineraMecanizmeteleop.leftliner.setPower(-.29);
         LineraMecanizmeteleop.claw.setPosition(.8);
         sleep(sleepTime2);
+        driveAuto.strafe(forwardSpeed, linear2);
+        driveAuto.stopmotor();
+        sleep(sleepTime);
         driveAuto.moveforward(backwardSpeed, firstBackwardTime);
         LineraMecanizmeteleop.stopmotor2();
         sleep(sleepTime3);
         driveAuto.stopmotor();
+        driveAuto.strafe(forwardSpeed, -linear2);
+        driveAuto.stopmotor();
+        sleep(sleepTime);
 
 
     }
