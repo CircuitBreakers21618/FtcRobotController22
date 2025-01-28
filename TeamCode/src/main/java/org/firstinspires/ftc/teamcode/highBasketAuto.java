@@ -30,14 +30,14 @@ goes backwards 11 mm
     double backwardSpeed = -.5;
 
     //in milliseconds
-    int linear = 20;
+    int linear = 30;
     int netzone = 250;
     int firstBackwardTime = 0;
-
+    int linear2 = 500;
 
     int sleepTime = 500;
     int sleepTime2 = 1500;
-    int sleepTime3 = 4600;
+    int sleepTime3 = 5000;
 
     int sleepLift = 1975;
 
@@ -63,8 +63,11 @@ goes backwards 11 mm
         LineraMecanizmeteleop.leftliner.setPower(-.29);
         LineraMecanizmeteleop.claw.setPosition(.8);
         sleep(sleepTime2);
-        driveAuto.moveforward(backwardSpeed, firstBackwardTime);
+        driveAuto.strafe(forwardSpeed, linear2);
+        driveAuto.stopmotor();
         LineraMecanizmeteleop.stopmotor2();
+        sleep(sleepTime);
+        driveAuto.moveforward(backwardSpeed, firstBackwardTime);
         sleep(sleepTime3);
         driveAuto.stopmotor();
 
