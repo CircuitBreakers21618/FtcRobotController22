@@ -14,7 +14,7 @@ public class specimonauto extends LinearOpMode {
 
     int startTime = 700;
     int startTime2 = 700;
-    int backwardTime = 600;
+    int backwardTime = 1200;
     int strafe = 4000;
 
     int sleepTime3 = 300;
