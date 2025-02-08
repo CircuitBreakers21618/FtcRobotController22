@@ -12,13 +12,13 @@ public class specimonauto extends LinearOpMode {
     double forwardSpeed = 0.5;
     double backwardSpeed = -0.5;
 
-    int startTime = 750;
-    int startTime2 = 35;
-    int backwardTime = 1550;
-    int strafe = 3750;
+    int startTime = 775;
+    int startTime2 = 400;
+    int backwardTime = 1350;
+    int strafe = 3250;
 
     int sleepTime3 = 550;
-    int sleepTime2 = 1500;
+    int sleepTime2 = 1300;
     int sleepTime = 50;
     int sleepLift = 700;
     @Override
@@ -36,7 +36,7 @@ public class specimonauto extends LinearOpMode {
         driveAuto.moveforward(forwardSpeed, startTime2);
         driveAuto.stopmotor();
         sleep(sleepTime);
-        LineraMecanizmeteleop.leftliner.setPower(.4);
+        LineraMecanizmeteleop.leftliner.setPower(.5);
         sleep(sleepTime3);
         LineraMecanizmeteleop.claw.setPosition(.8);
         sleep(sleepTime2);

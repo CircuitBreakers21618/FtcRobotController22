@@ -20,7 +20,7 @@ public class LineraMecanizme {
         leftliner.setMode(DcMotor.RunMode.RUN_USING_ENCODER);
         leftliner.setZeroPowerBehavior(DcMotor.ZeroPowerBehavior.BRAKE);    }
     public void stopmotor2(){
-        leftliner.setPower(.1);
+        leftliner.setPower(.005);
 
     }
 }
